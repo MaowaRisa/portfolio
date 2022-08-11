@@ -1,6 +1,6 @@
 /* ======= Typing Animation ======*/
 var typed = new Typed(".typing",{
-    strings:["Web Designer", "Web Developer", "Backend Developer", "DevOps Engineer"],
+    strings:["Web Designer", "Web Developer", "Backend Developer", "Programmer", "Database Designer"],
     typeSpeed: 100,
     Backaspeed:60,
     loop:true
@@ -8,7 +8,7 @@ var typed = new Typed(".typing",{
 
 /* ========  Aside ================ */
 const nav = document.querySelector(".nav"),
-      navList = document.querySelectorAll("li"),
+      navList = document.querySelectorAll(".nav-link"),
       totalNavList = navList.length;
       allSection = document.querySelectorAll(".section"),
       totalSection = allSection.length;
@@ -65,13 +65,36 @@ document.querySelector(".hire-me").addEventListener("click", function(){
 })
 const navTogglerBtn = document.querySelector(".nav-toggler"),
       aside =document.querySelector(".aside");
-      navTogglerBtn.addEventListener("click", () => {
-          asideSelectionTogglerBtn()
-      })
-      function asideSelectionTogglerBtn(){
-          aside.classList.toggle("open");
-          navTogglerBtn.classList.toggle("open");
-          for(let i=0; i<totalSection; i++){
-              allSection[i].classList.toggle("open");
-          }
-      }
+navTogglerBtn.addEventListener("click", () => {
+    asideSelectionTogglerBtn();
+});
+function asideSelectionTogglerBtn(){
+    aside.classList.toggle("open");
+    navTogglerBtn.classList.toggle("open");
+    for(let i=0; i<totalSection; i++){
+        allSection[i].classList.toggle("open");
+    }
+}
+// Email send
+var sendBtn = document.getElementById("sendMail");
+sendBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    alert("Not working Now");
+    // var name = document.getElementById("name");
+    // var email = document.getElementById("email");
+    // var subject = document.getElementById("subject");
+    // var message = document.getElementById("message");
+    // var body = "Name: " + name + "<br> Email: " + email + "<br> Subject " + subject + "<br> Message " + message;
+    // Email.send({
+    //     Host : "smtp.gmail.com",
+    //     Username : "worldinfinityloop@gmail.com",
+    //     Password : "acxgfzgefayetyux",
+    //     To : 'worldinfinityloop@gmail.com',
+    //     From : email,
+    //     Subject : subject,
+    //     Body : body
+    // }).then(
+    //   message => alert(message)
+    // );
+
+});

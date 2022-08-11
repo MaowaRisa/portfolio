@@ -478,13 +478,27 @@ h3.my-profession{
     border-radius: 50%;
     background-color: var(--skin-color);
 }
+.about .about-content .timeline .timeline-ins-info{
+    display: flex;
+    justify-content:space-between;
+}
 .about .about-content .timeline .timeline-item .timeline-date{
     font-weight: 400;
     font-size: 14px;
-    margin-bottom: 12px;
+    margin-bottom: 1px;
     color: var(--text-black-700);
 }
 .about .about-content .timeline .timeline-item .timeline-date .fa{
+    margin-right: 5px;
+}
+
+.about .about-content .timeline .timeline-item .timeline-institude{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 1px;
+    color: var(--text-black-700);
+}
+.about .about-content .timeline .timeline-item .timeline-institude .fa-solid{
     margin-right: 5px;
 }
 .about .about-content .timeline .timeline-title{
@@ -516,6 +530,16 @@ h3.my-profession{
     padding: 30px 15px;
     text-align: center;
 }
+.service .service-item .service-item-inner .skill-lists ul{
+    text-align: left;
+    padding-left: 25px;
+}
+.service .service-item .service-item-inner .skill-lists ul i{
+    margin-right: 10px;
+}
+.service .service-item .service-item-inner .skill-lists ul li{
+    margin-bottom: 5px;
+}
 .service .service-item .service-item-inner:hover{
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
@@ -526,7 +550,7 @@ h3.my-profession{
     display: block;
     margin: 0 auto 30px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 .service .service-item .service-item-inner .icon .fa{
     font-size: 40px;
@@ -536,6 +560,10 @@ h3.my-profession{
 }
 .service .service-item .service-item-inner:hover .icon{
     background: var(--skin-color);
+    transform: translateY(-100%);
+}
+.service .service-item .service-item-inner:hover .skill-lists{
+    transform: translateY(-50%);
 }
 .service .service-item .service-item-inner:hover .icon .fa{
     font-size: 25px;
