@@ -62,7 +62,7 @@ document.querySelector(".hire-me").addEventListener("click", function(){
     updateNav(this);
     removeBackSection()
     addBackSection(sectionIndex);
-})
+});
 const navTogglerBtn = document.querySelector(".nav-toggler"),
       aside =document.querySelector(".aside");
 navTogglerBtn.addEventListener("click", () => {
@@ -75,6 +75,15 @@ function asideSelectionTogglerBtn(){
         allSection[i].classList.toggle("open");
     }
 }
+
+document.querySelector("#backHome").addEventListener("click", function(){
+    const sectionIndex = this.getAttribute("data-section-index");
+    // console.log(sectionIndex)
+    showSection(this);
+    updateNav(this);
+    removeBackSection()
+    addBackSection(sectionIndex);
+});
 // Email send
 var sendBtn = document.getElementById("sendMail");
 sendBtn.addEventListener("click", function(e){
